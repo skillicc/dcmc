@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__laravel-boost__application-info",
+      "Bash(npm install:*)",
+      "Bash(composer require:*)",
+      "Bash(c:xamppmysqlbinmysql.exe -u root -e \"CREATE DATABASE IF NOT EXISTS dcms CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;\")",
+      "Bash(\"c:/xampp/mysql/bin/mysql.exe\":*)",
+      "Bash(php artisan migrate:fresh:*)",
+      "Bash(npm run build:*)",
+      "mcp__laravel-boost__tinker",
+      "Bash(php artisan:*)",
+      "mcp__laravel-boost__database-schema",
+      "mcp__laravel-boost__list-routes",
+      "Bash(vendor/bin/pint:*)",
+      "mcp__laravel-boost__browser-logs",
+      "Bash(php -l:*)",
+      "mcp__laravel-boost__database-query",
+      "Bash(dir:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(npx vue-tsc:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "laravel-boost"
+  ]
+}
