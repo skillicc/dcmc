@@ -256,7 +256,6 @@ class ReportController extends Controller
                 DB::raw('COUNT(*) as total_invoices'),
                 DB::raw('COUNT(DISTINCT patient_id) as unique_patients'),
                 DB::raw('SUM(total) as total_revenue'),
-                DB::raw('SUM(consultation_fee) as consultation_revenue'),
                 DB::raw('SUM(doctor_commission) as total_commission'),
                 DB::raw('AVG(total) as avg_invoice_value')
             )
@@ -401,7 +400,6 @@ class ReportController extends Controller
                     'patient_phone' => $invoice->patient?->phone,
                     'doctor_name' => $invoice->doctor?->name,
                     'subtotal' => $invoice->subtotal,
-                    'consultation_fee' => $invoice->consultation_fee,
                     'discount' => $invoice->discount,
                     'total' => $invoice->total,
                     'paid' => $invoice->paid,
@@ -416,7 +414,6 @@ class ReportController extends Controller
             ->selectRaw('
                 COUNT(*) as total_invoices,
                 SUM(subtotal) as total_subtotal,
-                SUM(consultation_fee) as total_consultation,
                 SUM(discount) as total_discount,
                 SUM(total) as total_sales,
                 SUM(paid) as total_collected,
