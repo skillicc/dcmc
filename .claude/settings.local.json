@@ -19,7 +19,11 @@
       "Bash(dir:*)",
       "Bash(ls:*)",
       "Bash(grep:*)",
-      "Bash(npx vue-tsc:*)"
+      "Bash(npx vue-tsc:*)",
+      "Bash(ssh:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nFix migration: add referral_id column before referencing it\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

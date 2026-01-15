@@ -10,6 +10,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('invoices', function (Blueprint $table) {
+            // Add referral_id first if not exists
+            if (! Schema::hasColumn('invoices', 'referral_id')) {
+                $table->foreignId('referral_id')->nullable()->after('doctor_id');
+            }
+
             // Only add columns that don't exist
             if (! Schema::hasColumn('invoices', 'referral_discount')) {
                 $table->decimal('referral_discount', 10, 2)->default(0)->after('referral_id');
