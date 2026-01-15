@@ -414,7 +414,6 @@ class BillingController extends Controller
             ->selectRaw('
                 COUNT(*) as total_invoices,
                 SUM(subtotal) as total_subtotal,
-                SUM(consultation_fee) as total_consultation,
                 SUM(discount) as total_discount,
                 SUM(referral_discount) as total_referral_discount,
                 SUM(tax_amount) as total_tax,
